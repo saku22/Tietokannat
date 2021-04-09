@@ -6,3 +6,4 @@ Maija nimellä löytyy paljon tuloksia ja moni niistä on taas nimimuunnoksia es
 ### Tehtävä 2
 Olen syöttänyt varmaan satoihin palveluihin sähköpostiosoitteeni.
 ### Tehtävä 3
+![Kuva](OpettajaKurssit.png)
