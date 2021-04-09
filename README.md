@@ -16,3 +16,5 @@ SELECT DISTINCT kurssi FROM Kurssisuoritus
 ### Tehtävä 7
 SELECT * FROM Opiskelija WHERE nimi = 'Anna'
 ### Tehtävä 8
+Select * FROM Kurssisuoritus WHERE Opiskelija = 'Pihla'
+### Tehtävä 9
