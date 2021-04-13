@@ -18,3 +18,4 @@ SELECT * FROM Opiskelija WHERE nimi = 'Anna'
 ### Tehtävä 8
 Select * FROM Kurssisuoritus WHERE Opiskelija = 'Pihla'
 ### Tehtävä 9
+SELECT * FROM Opiskelija WHERE pääaine LIKE '%tiede%'  
