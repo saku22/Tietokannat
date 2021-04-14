@@ -18,4 +18,7 @@ SELECT * FROM Opiskelija WHERE nimi = 'Anna'
 ### Tehtävä 8
 Select * FROM Kurssisuoritus WHERE Opiskelija = 'Pihla'
 ### Tehtävä 9
-SELECT * FROM Opiskelija WHERE pääaine LIKE '%tiede%'  
+SELECT * FROM Opiskelija WHERE pääaine LIKE '%tiede%' 
+SELECT DISTINCT pääaine FROM Opiskelija WHERE pääaine LIKE '%tiede%'
+### Tehtävä 10
+
