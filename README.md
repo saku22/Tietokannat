@@ -20,5 +20,10 @@ Select * FROM Kurssisuoritus WHERE Opiskelija = 'Pihla'
 ### Tehtävä 9
 SELECT * FROM Opiskelija WHERE pääaine LIKE '%tiede%' 
 SELECT DISTINCT pääaine FROM Opiskelija WHERE pääaine LIKE '%tiede%'
-### Tehtävä 10
+### Tehtävä 10  
+SELECT Kurssi.nimi. Kurssisuoritus.päivämäärä. Kurssisuoritus.arvosana FROM Kurssi, Kurssisuoritus
+WHERE Kurssi.kurssitunnus = Kurssisuoritus.kurssi
+### Tehtävä 11  
+SELECT Opiskelija.nimi, Kurssisuoritus.päivämäärä, Kurssisuoritus.arvosana FROM Opiskelija, Kurssisuoritus 
+### Tehtävä 12
 
