@@ -26,4 +26,9 @@ WHERE Kurssi.kurssitunnus = Kurssisuoritus.kurssi
 ### Tehtävä 11  
 SELECT Opiskelija.nimi, Kurssisuoritus.päivämäärä, Kurssisuoritus.arvosana FROM Opiskelija, Kurssisuoritus 
 ### Tehtävä 12
+SELECT Kurssi.nimi AS kurssi, Tehtävä.nimi AS tehtävä
+FROM Kurssi, Tehtävä, Kurssitehtävä
+WHERE Kurssi.Kurssitunnus = Kurssitehtävä.kurssi
+AND Tehtävä.tunnus = Kurssitehtävä.tehtävä
+### Tehtävä 13
 
