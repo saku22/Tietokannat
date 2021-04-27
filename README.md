@@ -31,4 +31,21 @@ FROM Kurssi, Tehtävä, Kurssitehtävä
 WHERE Kurssi.Kurssitunnus = Kurssitehtävä.kurssi
 AND Tehtävä.tunnus = Kurssitehtävä.tehtävä
 ### Tehtävä 13
+SELECT Kurssi.nimi AS Kurssin_nimi, Tehtävä.nimi AS Tehtävän_nimi
+FROM Kurssi, Tehtävä, Kurssitehtävä, Opiskelija, Tehtäväsuoritus
+WHERE Opiskelija.nimi = 'Anna'
+AND Kurssi.kurssitunnus = Kurssitehtävä.kurssi
+AND Tehtävä.tunnus = Kurssitehtävä.tehtävä
+AND Kurssitehtävä.tunnus = Tehtäväsuoritus.tehtävä
+AND Opiskelija.opiskelijanumero = Tehtäväsuoritus.opiskelija
+### tehtävä 14
+Valitaan myös opiskelija
+### Tehtävä 15
+SELECT nimi FROM Kurssi k
+WHERE k.nimi
+NOT IN (SELECT tehtävä FROM Kurssitehtävä)
+### Tehtävä 16
+
+### Tehtävä 17
+
 
