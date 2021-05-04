@@ -45,7 +45,18 @@ SELECT nimi FROM Kurssi k
 WHERE k.nimi
 NOT IN (SELECT tehtävä FROM Kurssitehtävä)
 ### Tehtävä 16
-
+SELECT kurssi AS kurssikoodi, COUNT(*) AS lukumäärä
+FROM kurssisuoritus 
+GROUP BY kurssi
 ### Tehtävä 17
-
+SELECT Kurssi.nimi AS kurssi , COUNT(*) AS lukumäärä
+FROM kurssisuoritus, Kurssi
+WHERE Kurssi.kurssitunnus = Kurssisuoritus.kurssi
+GROUP BY kurssi
+### Tehtävä 18
+SELECT Kurssi.nimi AS kurssi, COUNT(Kurssisuoritus.kurssi) AS lukumäärä
+FROM Kurssi LEFT JOIN Kurssisuoritus
+ON Kurssi.kurssitunnus = Kurssisuoritus.kurssi
+GROUP BY kurssi
+### Tehtävä 19
 
