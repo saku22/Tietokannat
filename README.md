@@ -59,4 +59,51 @@ FROM Kurssi LEFT JOIN Kurssisuoritus
 ON Kurssi.kurssitunnus = Kurssisuoritus.kurssi
 GROUP BY kurssi
 ### Tehtävä 19
+CREATE TABLE Kurssi (kurssitunnus, nimi, kuvaus)
+### Tehtävä 20
+INSERT INTO Kurssi (kurssitunnus, nimi, kuvaus)  
+VALUES ('12345', 'SQL-kielen perusteet', 'Hei maailma')  
+SELECT Kurssi.nimi, Kurssi.kurssitunnus FROM Kurssi
+### Tehtävä 21
+CREATE TABLE Kurssi
+(
+nimi varchar(50),
+kurssitunnus integer,
+kuvaus varchar(25)
+)  
+PRAGMA TABLE_INFO(Kurssi)
+### Tehtävä 22
+CREATE TABLE Kurssi
+(
+kurssitunnus integer,
+nimi varchar(20),
+kuvaus varchar(20)
+)  
+PRAGMA TABLE_INFO(Kurssi)
+### Tehtävä 23
+SELECT * FROM Opiskelija  
+Lisäämällä toisen opiskelian, haku näyttää kahta opiskelijaa moneen kertaan.  
+Virheviesti kertoo ettei kahta samnlaista opiskeliaa voi lisätä samalla tunnuksella.
+### Tehtävä 24
+CREATE TABLE Kurssi
+(
+kurssitunnus integer PRIMARY KEY,
+nimi varchar(25),
+kuvaus varchar(25)
+)  
+### Tehtävä 25
+PRAGMA foreign_keys = ON;
+
+CREATE TABLE Kurssitehtävä (
+tunnus integer PRIMARY KEY NOT NULL,
+tehtävä varchar(50) FOREIGN KEY NOT NULL,
+kurssi varchar(100) FOREIGN KEY NOT NULL
+
+CREATE TABLE Tehtävä
+tunnus integer PRIMARY KEY NOT NULL,
+nimi varchar(50) NOT NULL,
+kuvaus varchar(150)
+FOREIGN KEY(tehtävä) REFERENCES Tehtävä(tunnus)
+);
+### Tehtävä 26
 
