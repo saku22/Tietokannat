@@ -16,7 +16,7 @@ SELECT DISTINCT kurssi FROM Kurssisuoritus
 ### Tehtävä 7
 SELECT * FROM Opiskelija WHERE nimi = 'Anna'
 ### Tehtävä 8
-Select * FROM Kurssisuoritus WHERE Opiskelija = 'Pihla'
+Select * FROM Kurssisuoritus WHERE Opiskelija = 999999
 ### Tehtävä 9
 SELECT * FROM Opiskelija WHERE pääaine LIKE '%tiede%' 
 SELECT DISTINCT pääaine FROM Opiskelija WHERE pääaine LIKE '%tiede%'
@@ -24,7 +24,8 @@ SELECT DISTINCT pääaine FROM Opiskelija WHERE pääaine LIKE '%tiede%'
 SELECT Kurssi.nimi. Kurssisuoritus.päivämäärä. Kurssisuoritus.arvosana FROM Kurssi, Kurssisuoritus  
 WHERE Kurssi.kurssitunnus = Kurssisuoritus.kurssi
 ### Tehtävä 11  
-SELECT Opiskelija.nimi, Kurssisuoritus.päivämäärä, Kurssisuoritus.arvosana FROM Opiskelija, Kurssisuoritus 
+SELECT Opiskelija.nimi, Kurssisuoritus.päivämäärä, Kurssisuoritus.arvosana FROM Opiskelija, Kurssisuoritus  
+WHERE Opiskelija.opiskelijanumero = Kurssisuoritus.opiskelija
 ### Tehtävä 12
 SELECT Kurssi.nimi AS kurssi, Tehtävä.nimi AS tehtävä  
 FROM Kurssi, Tehtävä, Kurssitehtävä  
@@ -42,8 +43,8 @@ AND Opiskelija.opiskelijanumero = Tehtäväsuoritus.opiskelija
 Valitaan myös opiskelija
 ### Tehtävä 15
 SELECT nimi FROM Kurssi k  
-WHERE k.nimi
-NOT IN (SELECT tehtävä FROM Kurssitehtävä)
+WHERE k.kurssitunnus
+NOT IN (SELECT kurssi FROM Kurssitehtävä)
 ### Tehtävä 16
 SELECT kurssi AS kurssikoodi, COUNT(*) AS lukumäärä  
 FROM kurssisuoritus   
